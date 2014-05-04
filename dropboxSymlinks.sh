@@ -9,13 +9,13 @@
 # dropboxSymlinks.sh [Full/Path/To/Directory/To/Sync] [Full/Path/To/Dropbox/Directory]
 
 
-directory_to_sync=`eval echo "$1"`
-dropbox_directory=`eval echo "$2"`
-home_directory=`eval echo $HOME`
+directory_to_sync="$1"
+dropbox_directory="$2"
+home_directory="$HOME"
 
-cd $home_directory
-ln -s $directory_to_sync $dropbox_directory
-cd $dropbox_directory
+cd “$home_directory”
+ln -s “$directory_to_sync” “$dropbox_directory”
+cd “$dropbox_directory”
 ls -l
 
 
